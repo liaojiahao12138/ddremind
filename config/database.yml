@@ -23,3 +23,10 @@ test:
 production:
   <<: *default
   database: db/production.sqlite3
+
+production:
+  <<: *default
+  database: dd_remind__production
+  username: dd_remind
+  password: <%= ENV['DD_REMIND_DATABASE_PASSWORD'] %>
+  
